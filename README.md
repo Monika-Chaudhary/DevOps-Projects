@@ -1,9 +1,11 @@
 # DevOps-Projects1
-Deployment on Tomcat Server from Jenkins
+Deploy webapp using Jenkins on Tomcat Server
 
 Tools Installation:
-  Java - version 11
-  Tomcat Server -
+  1. Java - version 11
+  2. Git
+  3. Maven
+  4. Tomcat Server -
       i. Create tomcat user to run Tomcat server on system as not advisible to run on root
         sudo useradd -r -m -U -d /opt/tomcat -s /bin/false tomcat
       ii. Download Tomcat package
@@ -48,15 +50,21 @@ Restart=always
 [Install]
 WantedBy=multi-user.target
 
-      v. Reload daemon to update system about new file
+      v. As tomcat runs on 8080 port by default but if any other service run on same port then
+          Edit file //opt/tomcat/updated/conf/server.xml to change port no. which is free 
+            Connector port="8081" protocol="HTTP/1.1" connectionTimeout="20000" redirectPort="8443" maxParameterCount="1000"/>
+
+      vi. Reload daemon to update system about new file
             sudo systemctl daemon-reload
-      vi. Start Tomcat service on system
+      vii. Start Tomcat service on system
             sudo systemctl start tomcat
-      vii. Check status of Tomcat
+      viii. Check status of Tomcat
             sudo systemctl status tomcat
-      viii. To enable Tomcat service to run on startup
+      ix. To enable Tomcat service to run on startup
               sudo systemctl enable tomcat
-      ix. Allow firewall to be able to communicate outside local network
+      x. Allow firewall to be able to communicate outside local network
               sudo ufw allow 8080/tcp
+      xi. Verify Installation
+            http://<YourIPAddress>:8081
               
               
