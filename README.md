@@ -66,5 +66,7 @@ WantedBy=multi-user.target
               sudo ufw allow 8080/tcp
       xi. Verify Installation
             http://<YourIPAddress>:8081
+  5. Jenkins
+        Install 'deploy to container'             
               
               
