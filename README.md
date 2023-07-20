@@ -66,6 +66,8 @@ WantedBy=multi-user.target
               sudo ufw allow 8080/tcp
       xi. Verify Installation
             http://<YourIPAddress>:8081
+      xii. Edit : /opt/tomcat/updated/conf/tomcat-users.xml
+            <user username="uname" password="pwd" roles="manager-gui,manager-script,manager-status"/>
   5. Jenkins
         Install 'deploy to container'             
               
