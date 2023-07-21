@@ -69,6 +69,8 @@ WantedBy=multi-user.target
       xii. Edit : /opt/tomcat/updated/conf/tomcat-users.xml
             <user username="uname" password="pwd" roles="manager-gui,manager-script,manager-status"/>
   5. Jenkins
-        Install 'deploy to container'             
+        Install 'deploy to container' plugin
+
+
               
               
