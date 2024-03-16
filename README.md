@@ -4,6 +4,7 @@ Pre-requisite:
 i. Docker
 ii. Git
 iii. Minikube
+iv. Maven
 
 Steps:-
 i. Checkout code from GitHub
