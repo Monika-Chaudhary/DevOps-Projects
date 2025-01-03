@@ -1,0 +1,15 @@
+#Pull a Ubuntu base
+FROM ubuntu:latest
+
+#Update Package and Install Nginx package
+RUN apt-get update -y && apt-get install nginx -y
+
+#Copy index.html to nginx dir
+COPY index.html /var/www/html/
+
+#Expose nginx service on 80 port
+EXPOSE 80/tcp
+
+#Start Nginx Service either by CMD or Entrypoint Command
+CMD ["/usr/sbin/nginx", "-g", "daemon off;"]
+#ENTRYPOINT /usr/sbin/nginx -g 'daemon off;'
