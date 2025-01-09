@@ -22,4 +22,7 @@ Install NGINX:
    > sudo  apt-get update
 
 3. Install nginx
-   > sudo apt-get 
+   > sudo apt-get
+
+4. Check status
+   > systemctl status nginx
