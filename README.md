@@ -38,4 +38,11 @@ Install NGINX:
         # sites-enabled and sites-available - if want to deploy/config website
                #sites-enabled -> if we put website conf then it will deploy because it's include in default nginx.conf file
                #sites-available ->  if we put website conf then it will not deploy
-8. 
+_________________________________
+
+Deploy a website:-
+1. Clone source code
+   > git clone git@github.com:LondheShubham153/django-notes-app.git
+2. Build docker project
+   > docker build -t notes-app .
+3. 
