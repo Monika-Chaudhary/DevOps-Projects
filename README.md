@@ -10,3 +10,5 @@ Features of NGINX:
 3. Caching- Stores data for future requests
 
 4. URL redirection- route request like error.html page if page not found
+
+5. Architecture of Nginx based on Master-Slave so can run mutiple child process
