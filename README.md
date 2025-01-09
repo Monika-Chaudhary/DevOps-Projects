@@ -26,3 +26,16 @@ Install NGINX:
 
 4. Check status
    > systemctl status nginx
+
+5. Default page of nginx we can see by putting http://localhost:80 or http://127.0.0.1:80 over browser
+
+6. Default html page for nginx
+   > cd /var/www/html
+
+7. Default location for nginx
+   > cd /etc/nginx
+        #nginx.conf - nginx configuration file(don't modify)
+        # sites-enabled and sites-available - if want to deploy/config website
+               #sites-enabled -> if we put website conf then it will deploy
+               #sites-available ->  if we put website conf then it will not deploy
+8. 
