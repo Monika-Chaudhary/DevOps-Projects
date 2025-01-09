@@ -36,6 +36,6 @@ Install NGINX:
    > cd /etc/nginx
         #nginx.conf - nginx configuration file(don't modify)
         # sites-enabled and sites-available - if want to deploy/config website
-               #sites-enabled -> if we put website conf then it will deploy
+               #sites-enabled -> if we put website conf then it will deploy because it's include in default nginx.conf file
                #sites-available ->  if we put website conf then it will not deploy
 8. 
