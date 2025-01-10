@@ -40,9 +40,20 @@ Install NGINX:
                #sites-available ->  if we put website conf then it will not deploy
 _________________________________
 
-Deploy a website:-
+Deploy a website using nginx:-
 1. Clone source code
-   > git clone git@github.com:LondheShubham153/django-notes-app.git
+   > git clone repoSrcCodeURL.git
 2. Build docker project
-   > docker build -t notes-app .
-3. 
+   > docker build -t imageName .
+3. Create Container from Image
+   > docker run -d -it --name containerName -p hostPort:contPort imageName:tag (eg hostPort - 8000 and contPort - 8000)
+4. Check website working or not which run as container locally
+   #paste http://127.0.0.1:8000 in browser or run command 'curl -L http://127.0.0.1:8000'
+5. Now we want to deploy same application which running as locally as container (means run local application so we can't expose our local app over browser using nginx proxy)
+   i. Modify /etc/nginx/sites-enabled/default file as root user by adding proxy line
+       server{
+           location / {                                #whenever we browser http://ipOfInstanceWhereNginxInstalled:80/ then it will route the request to http://127.0.0.1:8000 using nginx proxy
+		        proxy_pass http://127.0.0.1:8000;   
+		        try_files $uri $uri/ =404;
+	        }
+       }
