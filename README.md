@@ -4,6 +4,8 @@ NGINX is a webserver which serves the web files(html, css, js, etc) to clients(b
 
 We set up /etc/nginx/nginx.config file to tell which configuration nginx holding either nginx acts as webserver or as proxy server
 
+Nginx is reverse proxy
+
 # Features of NGINX:
 1. Reverse Proxy- direct client requests to apropriate back-end server(Proxy means acting on behalf of another. It's intermediate server that forwrds client request to other servers)
    #there is single entrypoint using Nginx Proxy and reduces attack as centrailized access control, consolidated security and minimized exposure of servers
