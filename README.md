@@ -2,16 +2,21 @@
 
 NGINX is a webserver which serves the web files(html, css, js, etc) to clients(browser or to users)
 
+We set up /etc/nginx/nginx.config file to tell which configuration nginx holding either nginx acts as webserver or as proxy server
+
 Features of NGINX:
 1. Reverse Proxy- direct client requests to apropriate back-end server(Proxy means acting on behalf of another. It's intermediate server that forwrds client request to other servers)
+   #there is single entrypoint using Nginx Proxy and reduces attack as centrailized access control, consolidated security and minimized exposure
+   # Functionalities of NGINX as Proxy Server
+   a. Load Balancing 	b. Caching 	c. Security	d. Compresssion and Segmentation
 
-2. Load Balancing- manage and distributes the traffic load
+3. Load Balancing- manage and distributes the traffic load
 
-3. Caching- Stores data for future requests
+4. Caching- Stores data for future requests
 
-4. URL redirection- route request like error.html page if page not found
+5. URL redirection- route request like error.html page if page not found
 
-5. Architecture of Nginx based on Master-Slave so can run mutiple child process
+6. Architecture of Nginx based on Master-Slave so can run mutiple child process
 
 Install NGINX:
 1. Create ec2 instance
