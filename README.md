@@ -18,7 +18,7 @@ We set up /etc/nginx/nginx.config file to tell which configuration nginx holding
 
 6. Architecture of Nginx based on Master-Slave so can run mutiple child process
 
-Install NGINX:
+# Install NGINX:
 1. Create ec2 instance
     i. Select/Create key pair
    ii. Create SG and make sure check-on allow HTTP and HTTPS traffic from Internet
@@ -43,9 +43,8 @@ Install NGINX:
         # sites-enabled and sites-available - if want to deploy/config website
                #sites-enabled -> if we put website conf then it will deploy because it's include in default nginx.conf file
                #sites-available ->  if we put website conf then it will not deploy
-_________________________________
 
-Deploy a website using nginx:-
+# Deploy a website using nginx:-
 1. Clone source code
    > git clone repoSrcCodeURL.git
 2. Build docker project
