@@ -3,7 +3,7 @@
 NGINX is a webserver which serves the web files(html, css, js, etc) to clients(browser or to users)
 
 Features of NGINX:
-1. Reverse Proxy- direct client requests to apropriate back-end server
+1. Reverse Proxy- direct client requests to apropriate back-end server(Proxy means acting on behalf of another. It's intermediate server that forwrds client request to other servers)
 
 2. Load Balancing- manage and distributes the traffic load
 
