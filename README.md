@@ -6,7 +6,7 @@ We set up /etc/nginx/nginx.config file to tell which configuration nginx holding
 
 # Features of NGINX:
 1. Reverse Proxy- direct client requests to apropriate back-end server(Proxy means acting on behalf of another. It's intermediate server that forwrds client request to other servers)
-   #there is single entrypoint using Nginx Proxy and reduces attack as centrailized access control, consolidated security and minimized exposure
+   #there is single entrypoint using Nginx Proxy and reduces attack as centrailized access control, consolidated security and minimized exposure of servers
    #Functionalities of NGINX as Proxy Server
    a. Load Balancing 	b. Caching 	c. Security	d. Compresssion and Segmentation
 
