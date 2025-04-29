@@ -87,6 +87,9 @@ CMD ["node", "app.js"]
     iv. Update system
     > sudo apt update
 
+13. Set up K8S cluster and write k8s manifest files:
+    
+
     v. Install Jenkins
     > sudo apt install jenkins -y
 
