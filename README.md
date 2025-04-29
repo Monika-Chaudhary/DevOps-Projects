@@ -71,4 +71,24 @@ CMD ["node", "app.js"]
 10. Build docker image
     > docker build -t nodejs-app .
 
-11. 
+11. Run docker container
+    > docker run -d -p 3000:3000 --name node-app nodejs-app
+
+12. Install Java and Jenkins:
+    i. Install java
+    > sudo apt install openjdk-17-jdk -y
+
+    ii. Start by importing the GPG key. The GPG key verifies package integrity
+    > sudo wget -O /usr/share/keyrings/jenkins-keyring.asc https://pkg.jenkins.io/debian-stable/jenkins.io-2023.key
+
+    iii. Add the Jenkins software repository to the source list and provide the authentication key
+    > echo "deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc]" https://pkg.jenkins.io/debian-stable binary/ | sudo tee /etc/apt/sources.list.d/jenkins.list > /dev/null
+
+    iv. Update system
+    > sudo apt update
+
+    v. Install Jenkins
+    > sudo apt install jenkins -y
+
+    vi. Check Jenkins Status
+    > sudo systemctl status jenkins
