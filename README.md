@@ -93,6 +93,9 @@ CMD ["node", "app.js"]
     vi. Check Jenkins Status
     > sudo systemctl status jenkins
 
+13. Create Jenkins Pipeline
+    i. 
+
 13. Set up K8S cluster and write k8s manifest files:
     i. Install minikube
        > curl -LO https://github.com/kubernetes/minikube/releases/latest/download/minikube-linux-amd64
