@@ -93,11 +93,15 @@ CMD ["node", "app.js"]
     vi. Check Jenkins Status
     > sudo systemctl status jenkins
 
-13. Create Jenkins Pipeline
-    i. 
 
-13. Set up K8S cluster and write k8s manifest files:
+13. Set up K8S cluster and write k8s manifest files:kubectl create clusterrolebinding jenkins --clusterrole=cluster-admin --serviceaccount=default:jenkins
     i. Install minikube
        > curl -LO https://github.com/kubernetes/minikube/releases/latest/download/minikube-linux-amd64
        > sudo install minikube-linux-amd64 /usr/local/bin/minikube && rm minikube-linux-amd64
-
+14. Create Jenkins Pipeline
+    i. To give access to jenkins to kubectl
+       > kubectl create sa jenkins
+       > kubectl create clusterrolebinding jenkins --clusterrole=cluster-admin --serviceaccount=default:jenkins
+       > kubectl create token jenkins
+        // copy token and add to jenkins credentails as Secret
+       
