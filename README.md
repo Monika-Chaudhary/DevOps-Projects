@@ -105,3 +105,13 @@ CMD ["node", "app.js"]
        > kubectl create token jenkins
         // copy token and add to jenkins credentails as Secret
        
+15. Run Pipeline
+
+16. Access Application:
+    > minikube ip
+    // copy ip
+    
+    > kubectl get svc
+    // copy nodePort
+
+    Hit : minikubeIp:nodePortOfSVC
